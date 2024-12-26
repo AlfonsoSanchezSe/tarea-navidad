@@ -1,3 +1,7 @@
-.verde {
-    color: green;
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
+

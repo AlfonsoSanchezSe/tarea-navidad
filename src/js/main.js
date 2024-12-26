@@ -1,1 +1,0 @@
-console.log("plantilla de Juan que se lo tiene muy creido");
