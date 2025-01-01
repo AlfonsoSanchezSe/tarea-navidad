@@ -1,3 +1,5 @@
+@import url("../../node_modules/hover.css/css/hover-min.css");
+
 *, *::before, *::after{
     box-sizing: border-box;
     margin: 0;
@@ -26,6 +28,7 @@ body{
 header{
     background-color: #111;
     color:#DDD;
+    min-height: fit-content;
 }
 
 header .centrado{
@@ -48,9 +51,6 @@ a{
 
 a:hover{
     color: #999;
-    padding-bottom: 3px;
-    border-bottom: 2px solid #999;
-    animation: linea 0.3s ease-out forwards;
 }
 
 nav ul{
@@ -67,11 +67,14 @@ nav ul li:last-child::after{
     content: "";
 }
 
+
 li.actual a{
-    padding-bottom: 3px;
+    padding-bottom: 8px;
     border-bottom: 2px solid #999;
 
 }
+
+
 main{
     flex:1;
     padding: 2rem 0;
@@ -99,7 +102,7 @@ footer .centrado ul li:first-child::after{
     margin-left: 10px;
 }
 
-@keyframes linea{
+/* @keyframes linea{
     0%{
         padding-bottom: 10px;
         border-bottom-width: 1px;
@@ -112,7 +115,7 @@ footer .centrado ul li:first-child::after{
         padding-bottom: 3px;
     }
 }
-
+*/
 @media (max-width: 1000px) {
     header .centrado{
         flex-direction: column;
@@ -125,4 +128,18 @@ footer .centrado ul li:first-child::after{
         width: 95%;
     }
 
+} 
+
+.hvr-underline-from-center{
+    line-height: normal; 
+    padding-bottom: 5px;
+}
+
+.hvr-underline-from-center:before{
+    height: 2px;
+    background-color: #999;
+}
+
+.hvr-underline-from-center::after{
+    height: 2px;
 }
