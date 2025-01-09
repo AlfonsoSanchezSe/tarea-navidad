@@ -20,6 +20,7 @@ body{
 }
 
 .centrado{
+    height: 100%;
     width: 75%;
     margin: 0 auto;
 }
@@ -29,12 +30,13 @@ header{
     background-color: #111;
     color:#DDD;
     min-height: fit-content;
+    height: 10vh;
 }
 
 header .centrado{
     
     display:flex;
-    height: 10vh;
+    
     align-items: center;
     justify-content: space-between;
 }
@@ -57,6 +59,7 @@ nav ul{
     display:flex;
     gap: 10px;
     flex-wrap: wrap;
+    text-transform: uppercase;
 }
 
 nav ul li::after{
@@ -69,15 +72,24 @@ nav ul li:last-child::after{
 
 
 li.actual a{
-    padding-bottom: 8px;
     border-bottom: 2px solid #999;
+}
 
+.boton{
+    padding: 1rem;
+    background:none;
+    border:1px solid #ddd;
+    color: white;
+    cursor: pointer;
 }
 
 
 main{
     flex:1;
     padding: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 footer{
@@ -102,21 +114,34 @@ footer .centrado ul li:first-child::after{
     margin-left: 10px;
 }
 
-/* @keyframes linea{
-    0%{
-        padding-bottom: 10px;
-        border-bottom-width: 1px;
-        
-    }
-    50%{
-        border-bottom-width: 2px;
-    }
-    100%{
-        padding-bottom: 3px;
-    }
+
+.bloque-centro{
+    width: 40%;
+    
+    padding: 1rem;
+    border: 1px solid #ddd;
+
+    display:flex;
+    flex-direction: column;
+
 }
-*/
-@media (max-width: 1000px) {
+.bloque-centro h1{
+    text-align: center;
+}
+
+.bloque-centro p{
+    margin: 1rem 0;
+}
+
+.bloque-centro a{
+    align-self: center;
+}
+
+.media{
+    width: 35%;
+}
+
+/* @media (max-width: 500px) {
     header .centrado{
         flex-direction: column;
         justify-content: center;
@@ -124,22 +149,41 @@ footer .centrado ul li:first-child::after{
         gap: 10px;
     }
 
+    nav ul{
+        flex-direction: column;
+    }
+
+    nav ul li::after{
+        content: "";
+        margin-left: 0;
+    }
+
     .centrado{
         width: 95%;
     }
 
-} 
+    header{
+        height: fit-content;
+    }
 
-.hvr-underline-from-center{
-    line-height: normal; 
-    padding-bottom: 5px;
-}
+}  */
 
+
+/* Modificaciones en animaciones */
 .hvr-underline-from-center:before{
     height: 2px;
     background-color: #999;
 }
 
-.hvr-underline-from-center::after{
+/* .hvr-underline-from-center::after{
     height: 2px;
+} */
+
+.hvr-shutter-out-horizontal:before{
+    background:#DDD;
+    color: #111;
+}
+
+.hvr-shutter-out-horizontal:hover{
+    color: #111;
 }
