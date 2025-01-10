@@ -141,6 +141,13 @@ footer .centrado ul li:first-child::after{
     width: 35%;
 }
 
+.biografia .centrado{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+}
+
 /* @media (max-width: 500px) {
     header .centrado{
         flex-direction: column;
