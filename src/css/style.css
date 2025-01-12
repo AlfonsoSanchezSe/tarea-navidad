@@ -29,8 +29,7 @@ body{
 header{
     background-color: #111;
     color:#DDD;
-    min-height: fit-content;
-    height: 10vh;
+    min-height: 10vh;
 }
 
 header .centrado{
@@ -83,6 +82,44 @@ li.actual a{
     cursor: pointer;
 }
 
+.centrado.contacto{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.formulario{
+    border: 1px solid #DDD;
+    border-radius: 1rem;
+    padding: 1rem;
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+.form-label{
+    display:flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-info{
+    font-size: .7rem;
+}
+
+input,textarea,select{
+
+    border: none;
+    padding: .4rem;
+    font-size: 1rem;
+
+}
+
+textarea{
+    resize: none;
+    font-family: sans-serif;
+}
+
 
 main{
     flex:1;
@@ -99,11 +136,13 @@ footer{
 footer .centrado{
     color:#ddd;
     display:flex;
-    flex-direction: column;
-    height: 10vh;
-    justify-content: center;
+    
+    min-height: 15vh;
+    justify-content: space-between;
+    align-items: center;
     line-height: 2rem;
 }
+
 footer .centrado ul{
     display:flex;
     gap:10px;
@@ -148,43 +187,12 @@ footer .centrado ul li:first-child::after{
     justify-content: center;
 }
 
-/* @media (max-width: 500px) {
-    header .centrado{
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        gap: 10px;
-    }
-
-    nav ul{
-        flex-direction: column;
-    }
-
-    nav ul li::after{
-        content: "";
-        margin-left: 0;
-    }
-
-    .centrado{
-        width: 95%;
-    }
-
-    header{
-        height: fit-content;
-    }
-
-}  */
-
 
 /* Modificaciones en animaciones */
 .hvr-underline-from-center:before{
     height: 2px;
     background-color: #999;
 }
-
-/* .hvr-underline-from-center::after{
-    height: 2px;
-} */
 
 .hvr-shutter-out-horizontal:before{
     background:#DDD;
@@ -194,3 +202,50 @@ footer .centrado ul li:first-child::after{
 .hvr-shutter-out-horizontal:hover{
     color: #111;
 }
+
+
+/* Test switch */
+
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 2em;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    border: 2px solid #414141;
+    border-radius: 50px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    left: 0.2em;
+    bottom: 0.2em;
+    background-color: white;
+    border-radius: inherit;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .switch input:checked + .slider {
+    box-shadow: 0 0 20px rgba(200, 200, 200, 0.8);
+    border: 2px solid #DDD;
+  }
+  
+  .switch input:checked + .slider:before {
+    transform: translateX(1.5em);
+  }

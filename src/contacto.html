@@ -25,17 +25,62 @@
             </div>
         </header>
         <main>
-            <div class="centrado">
-                <h1>Esto es un main</h1>
+            <div class="centrado contacto">
+
+                <form action="procesarFormulario.php" method="post" class="formulario">
+                    <div class="form-label">
+                        <label for="nombre">Nombre*</label>
+                        <input type="text" name="nombre" id="nombre" required>
+                    </div>
+
+
+                    <div class="form-label">
+                        <label for="email">Email*</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+
+                    <div class="form-label">
+                        <label for="email">Tipo de Mensaje*</label>
+                        <select name="mensaje" id="mensaje">
+                            <option value="" disabled selected>Seleccione una opción...</option>
+                            <option value="duda">Duda</option>
+                            <option value="sugerencia">Sugerencia</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-label">
+                        <label for="mensaje">Mensaje*</label>
+                        <textarea name="mensaje" id="mensaje" required></textarea>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="checkbox" name="checkbox" id="checkbox" required>
+                        <label for="checkbox">He leido y acepto los terminos y condiciones.*</label>
+                    </div>
+                    <p class="form-info">* Campos obligatorios</p>
+                    <button class="hvr-shutter-out-horizontal boton">Enviar</button>
+                </form>
+
             </div>
         </main>
         <footer>
             <div class="centrado">
-                <p>&copy; 2024/2025 | Hecho por Alfonso Sánchez Serrano</p>
-                <ul>
-                    <li><a class="hvr-underline-from-center" href="https://github.com/AlfonsoSanchezSe/tarea-navidad">Repositorio de GitHub</a></li>
-                    <li><a class="hvr-underline-from-center" href="https://github.com/AlfonsoSanchezSe">Cuenta de GitHub</a></li>
-                </ul>
+                <div class="izq">
+                    <p>&copy; 2024/2025 | Hecho por Alfonso Sánchez Serrano</p>
+                    <ul>
+                        <li><a class="hvr-underline-from-center"
+                                href="https://github.com/AlfonsoSanchezSe/tarea-navidad">Repositorio de GitHub</a></li>
+                        <li><a class="hvr-underline-from-center" href="https://github.com/AlfonsoSanchezSe">Cuenta de
+                                GitHub</a></li>
+                    </ul>
+                </div>
+                <!-- <div class="der">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div> -->
             </div>
         </footer>
 
