@@ -14,7 +14,8 @@ const frasesElonMusk = [
 
   function establecerFrase() {
     const fraseAleatoria = frasesElonMusk[Math.round(Math.random() * (frasesElonMusk.length-1))];
-    document.querySelector("#frase").innerHTML = `<p>${fraseAleatoria}</p>`;
+    document.querySelector("#quote").innerHTML = `<p>${fraseAleatoria} - Elon Musk</p>`;
   }
 
-  //establecerFrase();
+
+  establecerFrase();

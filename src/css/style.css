@@ -25,6 +25,45 @@ body{
     margin: 0 auto;
 }
 
+.centrado.logros h1{
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.card img{
+    width: 100%;
+    max-height: 230px;
+    object-fit: cover;
+}
+
+.card-header h2{
+    margin-bottom: 1rem;
+}
+
+
+.card{
+    display:flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem;
+    padding:  1rem;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    width: 300px;
+    transition: all .2s ease-in-out;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    box-shadow: 3px 0 1rem #999;
+}
+
 
 header{
     background-color: #111;
@@ -87,6 +126,11 @@ li.actual a{
     display:flex;
     flex-direction: column;
     gap: 1rem;
+    justify-content: center;
+}
+
+.contacto h2{
+    text-align: center;
 }
 
 .contacto .boton{
@@ -158,6 +202,10 @@ footer .centrado ul li:first-child::after{
     margin-left: 10px;
 }
 
+#quote{
+    font-style: italic;
+    letter-spacing: 2px;
+}
 
 .bloque-centro{
     width: 40%;
@@ -192,6 +240,10 @@ footer .centrado ul li:first-child::after{
     justify-content: center;
 }
 
+iframe{
+    border-radius: 1rem;
+}
+
 
 /* Modificaciones en animaciones */
 .hvr-underline-from-center:before{
@@ -209,7 +261,7 @@ footer .centrado ul li:first-child::after{
 }
 
 
-/* Test switch */
+/* Boton dark-light mode */
 
 .switch {
     font-size: 17px;
@@ -253,4 +305,11 @@ footer .centrado ul li:first-child::after{
   
   .switch input:checked + .slider:before {
     transform: translateX(1.5em);
+  }
+  
+
+  @media (min-height: 900px) {
+        .slider:before {
+        bottom: 0.15em;
+      }
   }
