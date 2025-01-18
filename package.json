@@ -16,12 +16,14 @@
     "buffer": "^6.0.3",
     "parcel": "^2.13.2",
     "parcel-bundler": "^1.12.5",
-    "path-browserify": "^1.0.1",
-    "posthtml-include": "^2.0.1"
+    "path-browserify": "^1.0.1"
   },
   "dependencies": {
     "@knight-lab/timelinejs": "^3.9.6",
+    "get-intrinsic": "^1.2.7",
     "hover.css": "^2.3.2",
-    "photoswipe": "^5.4.4"
+    "math-intrinsics": "^1.1.0",
+    "photoswipe": "^5.4.4",
+    "posthtml-include": "^2.0.1"
   }
 }
