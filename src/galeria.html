@@ -7,48 +7,84 @@
     <title>Elon Musk</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/image/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="../node_modules/photoswipe/dist/photoswipe.css">
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <div class="centrado">
-                <h1 class="nombre"><a href="index.html">Elon Musk</a></h1>
-                <nav class="menu">
-                    <ul>
-                        <li><a class="hvr-underline-from-center" href="index.html">Inicio</a></li>
-                        <li><a class="hvr-underline-from-center" href="biografia.html">Biografia</a></li>
-                        <li><a class="hvr-underline-from-center" href="logros.html">Logros</a></li>
-                        <li class="actual"><a href="galeria.html">Galeria</a></li>
-                        <li><a class="hvr-underline-from-center" href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <include src="./header.html"></include>
         <main>
-            <div class="centrado">
-                <h1>TBD</h1>
+            <div class="centrado galeria">
+                <div id="galeria">
+                    <a href="assets/image/galeria/01.jpg"
+                        data-pswp-width="725" data-pswp-height="1000" target="_blank">
+                        <img src="assets/image/galeria/01.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/02.jpg"
+                    data-pswp-width="2000" data-pswp-height="2000" target="_blank">
+                        <img src="assets/image/galeria/02.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/03.jpg"
+                    data-pswp-width="1550" data-pswp-height="2000" target="_blank">
+                        <img src="assets/image/galeria/03.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/04.jpg"
+                        data-pswp-width="2000" data-pswp-height="1200" target="_blank">
+                        <img src="assets/image/galeria/04.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/05.jpg"
+                        data-pswp-width="2000" data-pswp-height="1300" target="_blank">
+                        <img src="assets/image/galeria/05.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/06.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/06.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/07.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/07.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/08.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/08.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/09.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/09.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/10.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/10.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/11.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/11.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/12.jpg"
+                        data-pswp-width="2000" data-pswp-height="1500" target="_blank">
+                        <img src="assets/image/galeria/12.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/13.jpg"
+                        data-pswp-width="2000" data-pswp-height="1300" target="_blank">
+                        <img src="assets/image/galeria/13.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/14.jpg"
+                        data-pswp-width="2000" data-pswp-height="1100" target="_blank">
+                        <img src="assets/image/galeria/14.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/15.jpg"
+                        data-pswp-width="2000" data-pswp-height="1350" target="_blank">
+                        <img src="assets/image/galeria/15.jpg" class="galeria" alt="" />
+                    </a>
+                    <a href="assets/image/galeria/16.jpg"
+                        data-pswp-width="2000" data-pswp-height="1350" target="_blank">
+                        <img src="assets/image/galeria/16.jpg" class="galeria" alt="" />
+                    </a>
+
+                </div>
             </div>
         </main>
-        <footer>
-            <div class="centrado">
-                <div class="izq">
-                    <p>&copy; 2024/2025 | Hecho por Alfonso Sánchez</p>
-                    <ul>
-                        <li><a class="hvr-underline-from-center"
-                                href="https://github.com/AlfonsoSanchezSe/tarea-navidad">Repositorio de GitHub</a></li>
-                        <li><a class="hvr-underline-from-center" href="https://github.com/AlfonsoSanchezSe">Cuenta de
-                                GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="der">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
-        </footer>
+        <include src="./footer.html"></include>
 
     </div>
     <script type="module" src="js/main.js"></script>

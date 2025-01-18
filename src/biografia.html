@@ -7,48 +7,20 @@
     <title>Elon Musk</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" href="assets/image/favicon.png" type="image/x-icon" />
+    <link title="timeline-styles" rel="stylesheet" 
+              href="../node_modules/@knight-lab/timelinejs/dist/css/timeline.css">
+    <script src="../node_modules/@knight-lab/timelinejs/dist/js/timeline.js"></script>
 </head>
 
 <body>
     <div class="container">
-        <header>
-            <div class="centrado">
-                <h1 class="nombre"><a href="index.html">Elon Musk</a></h1>
-                <nav class="menu">
-                    <ul>
-                        <li><a class="hvr-underline-from-center" href="index.html">Inicio</a></li>
-                        <li class="actual"><a href="biografia.html">Biografia</a></li>
-                        <li><a class="hvr-underline-from-center" href="logros.html">Logros</a></li>
-                        <li><a class="hvr-underline-from-center" href="galeria.html">Galeria</a></li>
-                        <li><a class="hvr-underline-from-center" href="contacto.html">Contacto</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </header>
+        <include src="./header.html"></include>
         <main class="biografia">
             <div class="centrado">
-                <iframe src='https://cdn.knightlab.com/libs/timeline3/latest/embed/index.html?source=1vEBkcKDPjtCtri0WLjvWcgUuTgCQ8BI_tztBWVBa638&font=Default&lang=es&initial_zoom=2&height=650' width='100%' height='650' webkitallowfullscreen mozallowfullscreen allowfullscreen frameborder='0'></iframe>
+                <div id='timeline-embed' style="width: 100%; height: 600px"></div>
             </div>
         </main>
-        <footer>
-            <div class="centrado">
-                <div class="izq">
-                    <p>&copy; 2024/2025 | Hecho por Alfonso Sánchez</p>
-                    <ul>
-                        <li><a class="hvr-underline-from-center"
-                                href="https://github.com/AlfonsoSanchezSe/tarea-navidad">Repositorio de GitHub</a></li>
-                        <li><a class="hvr-underline-from-center" href="https://github.com/AlfonsoSanchezSe">Cuenta de
-                                GitHub</a></li>
-                    </ul>
-                </div>
-                <div class="der">
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider"></span>
-                    </label>
-                </div>
-            </div>
-        </footer>
+        <include src="./footer.html"></include>
 
     </div>
     <script type="module" src="js/main.js"></script>
