@@ -20,9 +20,8 @@
   },
   "dependencies": {
     "@knight-lab/timelinejs": "^3.9.6",
-    "get-intrinsic": "^1.2.7",
+    "@parcel/optimizer-svgo": "^2.13.3",
     "hover.css": "^2.3.2",
-    "math-intrinsics": "^1.1.0",
     "photoswipe": "^5.4.4",
     "posthtml-include": "^2.0.1"
   }
