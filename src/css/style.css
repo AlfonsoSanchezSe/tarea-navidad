@@ -11,6 +11,8 @@ body{
     font-family: sans-serif;
     background-color: black;
     color: white;
+
+    transition: all .4s ease-in-out;
 }
 
 .container{
@@ -56,7 +58,7 @@ body{
     border: 2px solid #ddd;
     border-radius: 1rem;
     width: 300px;
-    transition: all .2s ease-in-out;
+    transition: transform .2s ease-in-out, box-shadow .2s ease-in-out;
 }
 
 .card:hover{
@@ -87,10 +89,14 @@ ul{
 a{
     text-decoration: none;
     color: #ddd;
+
+    transition: all .4s ease-in-out;
 }
 
 a:hover{
     color: #999;
+
+    transition: all .4s ease-in-out;
 }
 
 nav ul{
@@ -121,6 +127,8 @@ a.actual{
     border:1px solid #ddd;
     color: white;
     cursor: pointer;
+
+    transition: all .4s ease-in-out;
 }
 
 .centrado.contacto{
@@ -160,9 +168,11 @@ a.actual{
 
 input,textarea,select{
 
-    border: none;
+    border: 1px solid white;
     padding: .4rem;
     font-size: 1rem;
+
+    transition: all .4s ease-in-out;
 
 }
 
@@ -201,6 +211,16 @@ footer .centrado ul{
 
 footer .centrado ul li:first-child::after{
     content: "·";
+    margin-left: 10px;
+}
+
+footer .copy{
+    display: flex;
+    gap: 10px;
+}
+
+footer .copy p:first-child::after{
+    content: "|";
     margin-left: 10px;
 }
 
@@ -273,6 +293,29 @@ img.galeria{
 }
 
 
+.preguntas{
+    border: 3px solid #ddd;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.pregunta{
+    padding: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    margin: 1rem 0;
+}
+
+.pregunta p {
+    margin: 1rem 0;
+    font-size: 1.25rem;
+}
+.pregunta input {
+    margin: .5rem 0;
+}
+
+
+
 /* Modificaciones en animaciones */
 .hvr-underline-from-center:before{
     height: 2px;
@@ -282,14 +325,18 @@ img.galeria{
 .hvr-shutter-out-horizontal:before{
     background:#DDD;
     color: #111;
+
+    transition: all .4s ease-in-out;
 }
 
 .hvr-shutter-out-horizontal:hover{
     color: #111;
+
+    transition: all .4s ease-in-out;
 }
 
 
-/* Boton dark-light mode */
+/* Boton cambio dark-light mode */
 
 .switch {
     font-size: 17px;
@@ -334,14 +381,6 @@ img.galeria{
   .switch input:checked + .slider:before {
     transform: translateX(1.5em);
   }
-  
-
-  @media (min-height: 900px) {
-        .slider:before {
-        bottom: 0.15em;
-      }
-  }
-
 
 .tl-text h2.tl-headline{
     color: white;
@@ -349,4 +388,131 @@ img.galeria{
 
   .tl-slider-background{
     background-color: #333;
+  }
+
+  /* MODO CLARO (El oscuro es por defecto) */
+
+  body.light{
+    
+    background-color: white;
+    color: black;
+    
+
+    & .hvr-shutter-out-horizontal:before{
+        background: #111;
+    }
+    
+    & .hvr-shutter-out-horizontal:hover{
+        color: #ddd;
+    }
+
+    & .boton{
+        color:black;
+    }
+
+    & .content a{
+        color: #444;
+    }
+    
+    & .content a:hover{
+        color: #222;
+    }
+
+    & select,input,textarea{
+        border: 1px solid black;
+    }
+
+  }
+
+
+
+
+  /*RESPONSIVE */
+
+  @media (min-height: 900px) {
+    .slider:before {
+    bottom: 0.15em;
+  }
+}
+
+
+  @media (max-width: 900px) {
+
+    header{
+        min-height: fit-content;
+        padding: 1rem;
+    }
+
+    nav ul{
+        display:flex;
+        gap: 10px;
+        flex-direction: column;
+        align-items: center;
+    }
+    header .centrado{
+        display:flex;
+        flex-direction: column;
+        gap: 1rem;
+
+    }
+    
+    nav ul li::after{
+        content: "";
+        margin-left: 0;
+    }
+
+    main{
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .centrado{
+        width: 95%;
+        height: fit-content;
+    }
+
+
+    .bloque-centro{
+        width: 80%;
+        order: 2;
+    }
+
+    .media{
+        width: 80%;
+    }
+
+
+    footer{
+        padding: 1rem;
+    }
+
+    footer .centrado{
+        flex-direction: column;
+        gap: 1rem;
+        
+    }
+
+    .izq{
+        flex-direction: column;
+    }
+
+    footer .copy{
+        flex-direction: column;
+        gap: 0;
+        align-items: center;
+    }
+    
+    footer .copy p:first-child::after{
+        content: "";
+        margin-left: 0;
+    }
+
+    .cards{
+        justify-content: center;
+    }
+
+    .formulario h2{
+        font-size: 1.25rem;
+    }
+
   }

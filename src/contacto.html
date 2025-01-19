@@ -9,10 +9,10 @@
     <link rel="icon" href="assets/image/favicon.png" type="image/x-icon" />
 </head>
 
-<body>
+<body class="light">
     <div class="container">
         <include src="./header.html"></include>
-        <main>
+        <main class="content">
             <div class="centrado contacto">
 
                 <form action="procesarFormulario.php" method="post" class="formulario">
@@ -29,8 +29,8 @@
                     </div>
 
                     <div class="form-label">
-                        <label for="email">Tipo de Mensaje*</label>
-                        <select name="mensaje" id="mensaje" required>
+                        <label for="tipo">Tipo de Mensaje*</label>
+                        <select name="tipo" id="tipo" required>
                             <option value="" disabled selected>Seleccione una opción...</option>
                             <option value="duda">Duda</option>
                             <option value="sugerencia">Sugerencia</option>
