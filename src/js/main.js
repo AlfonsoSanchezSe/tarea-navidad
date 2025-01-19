@@ -1,4 +1,5 @@
 import PhotoSwipeLightbox from 'photoswipe/dist/photoswipe-lightbox.esm';
+import { Timeline } from '@knight-lab/timelinejs';
 
 
 //Variables y constantes generales
@@ -39,7 +40,7 @@ const establecerFrase = () => {
 //Funcion para generar timeline cuando accedemos a biografia
 const generarTimeline = () => {
   if (document.querySelector("#timeline-embed") != null) {
-    timeline = new TL.Timeline('timeline-embed',
+    timeline = new Timeline('timeline-embed',
       'https://docs.google.com/spreadsheets/d/1vEBkcKDPjtCtri0WLjvWcgUuTgCQ8BI_tztBWVBa638/edit?gid=0#gid=0', opcionesTimeline);
   }
 }
