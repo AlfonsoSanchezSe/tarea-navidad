@@ -13,7 +13,7 @@ let correctas = 0;
 
         let respuestaCorrecta = document.querySelector(`input[name="q${i+1}"][value="${res}"]`);
 
-        divRespuesta = document.querySelector(`.q${i+1}`);
+        let divRespuesta = document.querySelector(`.q${i+1}`);
 
         if(respuesta == null){
             alert("Por favor responde todas las preguntas");
